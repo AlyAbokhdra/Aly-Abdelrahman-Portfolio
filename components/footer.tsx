@@ -13,7 +13,7 @@ export function Footer() {
           </div>
           <div className="flex items-center space-x-4 text-neutral-500 dark:text-neutral-400">
             <Link
-              href="https://github.com"
+              href="https://github.com/AlyAbokhdra"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-neutral-900 dark:hover:text-neutral-50 transition-colors"
@@ -22,7 +22,7 @@ export function Footer() {
               <Github className="h-5 w-5" />
             </Link>
             <Link
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/alydev/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-neutral-900 dark:hover:text-neutral-50 transition-colors"
@@ -31,7 +31,7 @@ export function Footer() {
               <Linkedin className="h-5 w-5" />
             </Link>
             <Link
-              href="mailto:aliabdelrahman182000@gmail.com"
+              href="mailto:alyabokhdra@gmail.com"
               className="hover:text-neutral-900 dark:hover:text-neutral-50 transition-colors"
             >
               <span className="sr-only">Email</span>

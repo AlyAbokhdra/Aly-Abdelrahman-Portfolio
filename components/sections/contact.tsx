@@ -68,8 +68,8 @@ export function Contact() {
                   </div>
                   <div className="ml-4">
                     <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">Email</p>
-                    <a href="mailto:aliabdelrahman182000@gmail.com" className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">
-                      aliabdelrahman182000@gmail.com
+                    <a href="mailto:alyabokhdra@gmail.com" className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">
+                      alyabokhdra@gmail.com
                     </a>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="md:col-span-3"
           >
-            <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" onSubmit={handleSubmit} className="space-y-6 bg-white dark:bg-neutral-950 p-8 rounded-lg border border-neutral-200 dark:border-neutral-800 shadow-sm">
+            <form action="https://formspree.io/f/mwlkedbd" method="POST" onSubmit={handleSubmit} className="space-y-6 bg-white dark:bg-neutral-950 p-8 rounded-lg border border-neutral-200 dark:border-neutral-800 shadow-sm">
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Name</label>
