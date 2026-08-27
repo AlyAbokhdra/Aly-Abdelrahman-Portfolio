@@ -1,4 +1,3 @@
-```markdown
 # Aly Abdelrahman | ECM Consultant & Software Engineer Portfolio
 
 Live Production: [alydevs.com](https://alydevs.com)
@@ -22,65 +21,49 @@ The codebase requires no external databases or backend APIs to run locally. Cont
    ```bash
    git clone [https://github.com/AlyAbokhdra/Aly-Abdelrahman-Portfolio.git](https://github.com/AlyAbokhdra/Aly-Abdelrahman-Portfolio.git)
    cd Aly-Abdelrahman-Portfolio
-
-```
+   ```
 
 2. **Install dependencies:**
-```bash
-npm install
-
-```
-
+   ```bash
+   npm install
+   ```
 
 3. **Start the development server:**
-```bash
-npm run dev
-
-```
-
-
-Navigate to `http://localhost:3000` to view the application.
+   ```bash
+   npm run dev
+   ```
+   Navigate to `http://localhost:3000` to view the application.
 
 ## 📝 Content Management Workflow
 
 ### Adding a Technical Blog Post
-
 The blog engine uses Next.js `generateStaticParams` to pre-compile Markdown files into static HTML at build time.
-
 1. Create a new `.md` file in the `/content/blog/` directory.
 2. Include the required YAML frontmatter at the top of the file:
-```yaml
----
-title: "Your Post Title"
-date: "Aug 28, 2026"
-excerpt: "A brief summary of the post."
-readTime: "5 min read"
----
-
-```
-
-
+   ```yaml
+   ---
+   title: "Your Post Title"
+   date: "Aug 28, 2026"
+   excerpt: "A brief summary of the post."
+   readTime: "5 min read"
+   ---
+   ```
 3. Write your content below the frontmatter. The engine supports standard Markdown, tables (`remark-gfm`), and code blocks.
 
 ### Updating Certifications
-
 The certifications grid is driven by a scalable TypeScript array to prevent file I/O overhead.
-
 1. Open `config/certificates.ts`.
 2. Append your new certificate object to the exported array:
-```typescript
-{
-  id: "unique-id",
-  name: "Certification Name",
-  issuer: "Issuing Organization",
-  brief: "Short description.",
-  image: "/images/certs/filename.png",
-  link: "[https://verification-link.com](https://verification-link.com)"
-}
-
-```
-
-
+   ```typescript
+   {
+     id: "unique-id",
+     name: "Certification Name",
+     issuer: "Issuing Organization",
+     brief: "Short description.",
+     image: "/images/certs/filename.png",
+     link: "[https://verification-link.com](https://verification-link.com)"
+   }
+   ```
 3. Drop the corresponding compressed image into `public/images/certs/`.
 
 ## 🚢 Deployment
@@ -91,13 +74,4 @@ This repository is configured for automated CI/CD via Vercel. Pushing to the `ma
 git add .
 git commit -m "Update content"
 git push origin main
-
-```
-
-```
-
-***
-
-Are you ready to test the GitHub push workflow to ensure Vercel automatically catches the commit and updates the live site?
-
 ```
