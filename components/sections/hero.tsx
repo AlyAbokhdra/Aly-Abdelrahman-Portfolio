@@ -25,6 +25,17 @@ const itemVariants = {
 };
 
 export function Hero() {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const target = document.getElementById(targetId);
+    if (target) {
+      // Force the browser to scroll regardless of the current URL hash
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Silently update the URL to reflect the state without triggering a jump
+      window.history.pushState(null, "", `#${targetId}`);
+    }
+  };
+
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-transparent">
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-neutral-50 dark:bg-neutral-950">
@@ -60,20 +71,21 @@ export function Hero() {
           </motion.div>
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="#projects"
-              className="inline-flex h-12 items-center justify-center rounded-md bg-neutral-900 px-8 text-sm font-medium text-white shadow transition-all hover:bg-neutral-800 hover:shadow-lg focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-700 disabled:pointer-events-none disabled:opacity-50 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200 dark:focus-visible:ring-neutral-300"
+            <a 
+              href="#experience" 
+              onClick={(e) => handleScroll(e, 'experience')}
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 font-medium transition-transform hover:scale-105 active:scale-95"
             >
-              View Enterprise Work
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
+              View Enterprise Experience
+            </a>
+            <a
               href="#contact"
+              onClick={(e) => handleScroll(e, 'contact')}
               className="inline-flex h-12 items-center justify-center rounded-md border border-neutral-200 bg-transparent px-8 text-sm font-medium text-neutral-900 shadow-sm transition-all hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 dark:border-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-900 dark:hover:text-neutral-50"
             >
               Contact Me
               <FileText className="ml-2 h-4 w-4" />
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
       </div>
