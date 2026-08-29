@@ -50,8 +50,8 @@ export function Hero() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <h2 className="text-base sm:text-xl font-mono text-neutral-500 dark:text-neutral-400 mb-6 flex flex-col sm:flex-row sm:items-center h-auto min-h-[4rem] sm:min-h-0">
-              <span className="mb-1 sm:mb-0">Building systems as {" "}</span>
+            <h2 className="text-base sm:text-xl font-mono text-neutral-500 dark:text-neutral-400 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span className="whitespace-nowrap shrink-0">Building systems as an</span>
               <AnimatedRole />
             </h2>
             <p className="text-lg text-neutral-500 dark:text-neutral-400 mb-8 max-w-2xl leading-relaxed">
