@@ -29,7 +29,7 @@ export function AnimatedRole() {
   }
 
   return (
-    <span className="inline-block relative">
+    <span className="inline-block relative w-full sm:w-auto">
       <AnimatePresence>
         <motion.span
           key={index}
@@ -37,12 +37,13 @@ export function AnimatedRole() {
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           exit={{ opacity: 0, y: -15, filter: "blur(4px)" }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="inline-block absolute left-0 top-0 whitespace-nowrap text-neutral-900 dark:text-neutral-100 font-semibold"
+          className="inline-block absolute left-0 top-0 text-neutral-900 dark:text-neutral-100 font-semibold w-full sm:w-auto"
         >
           {roles[index]}
         </motion.span>
       </AnimatePresence>
-      <span className="invisible pointer-events-none whitespace-nowrap" aria-hidden="true">
+      {/* Invisible placeholder utilizing the longest string and allowing natural wrap */}
+      <span className="invisible pointer-events-none w-full sm:w-auto block sm:inline-block" aria-hidden="true">
         Enterprise Content Management (ECM) Developer
       </span>
     </span>
