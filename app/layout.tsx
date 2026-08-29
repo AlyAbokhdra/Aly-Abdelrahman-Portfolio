@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: 'Aly Abdelrahman Portfolio',
     images: [
       {
-        url: '/opengraph-image.png',
+        url: 'https://alydevs.com/opengraph-image.png',
         width: 1200,
         height: 630,
         alt: 'Aly Abdelrahman - Portfolio Preview',

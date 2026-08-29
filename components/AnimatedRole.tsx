@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 const roles = [
-  { prefix: "Currently an", title: "Associate ECM Technical Consultant" },
-  { prefix: "Specializing in", title: "IBM FileNet & Datacap Solutions" },
-  { prefix: "Architecting as a", title: "Full-Stack Systems Engineer" },
-  { prefix: "Developing for", title: "Enterprise Content Management" },
-  { prefix: "Building as an", title: "Enterprise Integration Engineer" },
+  "Associate ECM Technical Consultant",
+  "IBM FileNet & Datacap Specialist",
+  "Enterprise Content Management (ECM) Developer",
+  "Full-Stack Systems Engineer",
+  "Enterprise Integration Engineer",
+  "Software Engineer",
 ];
 
 export function AnimatedRole() {
@@ -24,12 +25,7 @@ export function AnimatedRole() {
   }, []);
 
   if (!mounted) {
-    return (
-      <span className="inline-block">
-        <span className="text-neutral-500 dark:text-neutral-400">{roles[0].prefix} </span>
-        <span className="text-neutral-900 dark:text-neutral-100">{roles[0].title}</span>
-      </span>
-    );
+    return <span className="inline-block text-neutral-900 dark:text-neutral-100 font-semibold">{roles[0]}</span>;
   }
 
   return (
@@ -41,16 +37,13 @@ export function AnimatedRole() {
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           exit={{ opacity: 0, y: -15, filter: "blur(4px)" }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="inline-block absolute left-0 top-0 whitespace-nowrap"
+          className="inline-block absolute left-0 top-0 whitespace-nowrap text-neutral-900 dark:text-neutral-100 font-semibold"
         >
-          <span className="text-neutral-500 dark:text-neutral-400">{roles[index].prefix} </span>
-          <span className="text-neutral-900 dark:text-neutral-100 font-semibold">{roles[index].title}</span>
+          {roles[index]}
         </motion.span>
       </AnimatePresence>
-      {/* Invisible placeholder using the longest combined string to prevent layout shifts */}
       <span className="invisible pointer-events-none whitespace-nowrap" aria-hidden="true">
-        <span className="text-neutral-500">Currently an </span>
-        <span className="text-neutral-900 font-semibold">Associate ECM Technical Consultant</span>
+        Enterprise Content Management (ECM) Developer
       </span>
     </span>
   );

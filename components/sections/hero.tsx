@@ -29,7 +29,7 @@ export function Hero() {
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-transparent">
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-neutral-50 dark:bg-neutral-950">
         <div className="absolute inset-0 bg-gradient-to-tr from-neutral-100 via-white to-neutral-50 dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950 opacity-80" />
-        <div 
+        <div
           className="absolute inset-0 bg-[linear-gradient(to_right,#e5e5e5_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px]"
           style={{ maskImage: 'radial-gradient(ellipse 80% 50% at 50% 0%, #000 40%, transparent 100%)', WebkitMaskImage: 'radial-gradient(ellipse 80% 50% at 50% 0%, #000 40%, transparent 100%)' }}
         />
@@ -48,9 +48,10 @@ export function Hero() {
               Hi, I&apos;m <span className="text-neutral-600 dark:text-neutral-400">Aly Abdelrahman</span>
             </h1>
           </motion.div>
-          
+
           <motion.div variants={itemVariants}>
-            <h2 className="text-xl sm:text-2xl font-mono text-neutral-400 mb-4 h-8 flex items-center">
+            <h2 className="text-xl sm:text-2xl font-mono text-neutral-500 dark:text-neutral-400 mb-4 h-8 flex items-center">
+              <span>Building systems as&nbsp;</span>
               <AnimatedRole />
             </h2>
             <p className="text-lg text-neutral-500 dark:text-neutral-400 mb-8 max-w-2xl leading-relaxed">
