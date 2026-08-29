@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { ArrowRight, FileText } from "lucide-react";
+import { AnimatedRole } from "@/components/AnimatedRole";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -26,6 +27,20 @@ const itemVariants = {
 export function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-transparent">
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-neutral-950">
+        {/* Subtle animated gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-neutral-950 via-neutral-900 to-neutral-950 opacity-80" />
+
+        {/* Vercel-style architectural grid with a radial fade-out mask */}
+        <div 
+          className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px]"
+          style={{ maskImage: 'radial-gradient(ellipse 80% 50% at 50% 0%, #000 40%, transparent 100%)', WebkitMaskImage: 'radial-gradient(ellipse 80% 50% at 50% 0%, #000 40%, transparent 100%)' }}
+        />
+
+        {/* Optional warm amber accent glow */}
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-amber-900/10 blur-[120px]" />
+      </div>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           className="max-w-4xl"
@@ -40,8 +55,9 @@ export function Hero() {
           </motion.div>
           
           <motion.div variants={itemVariants}>
-            <h2 className="text-2xl sm:text-3xl font-medium text-neutral-600 dark:text-neutral-300 mb-6">
-              ECM Technical Consultant & Software Engineer
+            <h2 className="text-xl sm:text-2xl font-mono text-neutral-400 mb-4 h-8 flex items-center">
+              <span>Building & Architecting&nbsp;</span>
+              <AnimatedRole />
             </h2>
             <p className="text-lg text-neutral-500 dark:text-neutral-400 mb-8 max-w-2xl leading-relaxed">
               Specializing in Enterprise Content Management (ECM). I architect scalable microservices, develop complex IBM Datacap applications, administer CMOD infrastructures, and engineer seamless integrations between FileNet, FileTrail, and core banking systems.

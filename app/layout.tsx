@@ -4,13 +4,25 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { BinarySpotlight } from '@/components/binary-spotlight';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: 'Aly Abdelrahman - Portfolio',
   description: 'Portfolio website for Aly Abdelrahman, Associate Software Engineer & ECM Technical Consultant.',
   openGraph: {
-    title: 'Aly Abdelrahman - Portfolio',
-    description: 'Portfolio website for Aly Abdelrahman, Associate Software Engineer & ECM Technical Consultant.',
+    title: 'Aly Abdelrahman | ECM Consultant & Software Engineer',
+    description: 'Enterprise architecture, ECM consulting, and full-stack engineering portfolio.',
+    url: 'https://alydevs.com',
+    siteName: 'Aly Abdelrahman Portfolio',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Aly Abdelrahman - Portfolio Preview',
+      },
+    ],
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
@@ -38,6 +50,7 @@ export default function RootLayout({
           <div className="relative flex min-h-screen flex-col z-10">
             <Header />
             <main className="flex-1">{children}</main>
+            <Analytics />
             <Footer />
           </div>
         </ThemeProvider>
