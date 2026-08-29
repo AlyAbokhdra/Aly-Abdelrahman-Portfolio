@@ -4,12 +4,11 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 const roles = [
-  "Associate ECM Technical Consultant",
-  "IBM FileNet & Datacap Specialist",
-  "Enterprise Content Management (ECM) Developer",
-  "Full-Stack Systems Engineer",
-  "Enterprise Integration Engineer",
-  "Junior Software Engineer",
+  { prefix: "Currently an", title: "Associate ECM Technical Consultant" },
+  { prefix: "Specializing in", title: "IBM FileNet & Datacap Solutions" },
+  { prefix: "Architecting as a", title: "Full-Stack Systems Engineer" },
+  { prefix: "Developing for", title: "Enterprise Content Management" },
+  { prefix: "Building as an", title: "Enterprise Integration Engineer" },
 ];
 
 export function AnimatedRole() {
@@ -24,9 +23,13 @@ export function AnimatedRole() {
     return () => clearInterval(interval);
   }, []);
 
-  // SSR Hydration safeguard
   if (!mounted) {
-    return <span className="inline-block">{roles[0]}</span>;
+    return (
+      <span className="inline-block">
+        <span className="text-neutral-500 dark:text-neutral-400">{roles[0].prefix} </span>
+        <span className="text-neutral-900 dark:text-neutral-100">{roles[0].title}</span>
+      </span>
+    );
   }
 
   return (
@@ -40,12 +43,14 @@ export function AnimatedRole() {
           transition={{ duration: 0.4, ease: "easeInOut" }}
           className="inline-block absolute left-0 top-0 whitespace-nowrap"
         >
-          {roles[index]}
+          <span className="text-neutral-500 dark:text-neutral-400">{roles[index].prefix} </span>
+          <span className="text-neutral-900 dark:text-neutral-100 font-semibold">{roles[index].title}</span>
         </motion.span>
       </AnimatePresence>
-      {/* Invisible placeholder to prevent layout shift. Using the longest role name. */}
+      {/* Invisible placeholder using the longest combined string to prevent layout shifts */}
       <span className="invisible pointer-events-none whitespace-nowrap" aria-hidden="true">
-        Associate ECM Technical Consultant
+        <span className="text-neutral-500">Currently an </span>
+        <span className="text-neutral-900 font-semibold">Associate ECM Technical Consultant</span>
       </span>
     </span>
   );

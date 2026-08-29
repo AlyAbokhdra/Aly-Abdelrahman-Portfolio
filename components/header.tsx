@@ -37,7 +37,7 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-100">
+            <Link href="/" className="text-xl font-bold tracking-tighter text-neutral-950 dark:text-neutral-50">
               Aly<span className="text-neutral-500 dark:text-neutral-400">.</span>
             </Link>
           </div>
