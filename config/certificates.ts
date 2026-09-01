@@ -31,5 +31,15 @@ export const certificates: Certificate[] = [
     brief: "Comprehensive training on full stack software development using modern tools.",
     image: "/images/certs/Sprints x Microsoft Summer Camp - Web Development.png",
     link: "https://sprints.ai/en-eg/journeys/learning/1314/90132922/view-certificate"
+  },
+  {
+    id: "nti-ecm-bpm",
+    name: "Enterprise Content & Business Process Management",
+    issuer: "NTI",
+    brief: "\"Hire Ready\" track specializing in enterprise architecture, ECM administration, and BPM workflows.",
+    // Point this to your actual image file once you drop it in the public folder
+    image: "/images/certs/nti-certificate.png",
+    // Paste your actual verification URL here
+    link: "https://drive.google.com/file/d/17FzJKwJVzccqm26t5LQyqfmH-Md47jmd/view?usp=sharing"
   }
 ];

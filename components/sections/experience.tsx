@@ -93,6 +93,12 @@ export function Experience() {
                         </span>
                       </li>
                     ))}
+                    <li className="flex items-start">
+                      <span className="text-neutral-900 dark:text-neutral-100 mr-2 mt-1">•</span>
+                      <span className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Recognized as Employee of the Quarter for exceptional technical delivery and system troubleshooting across enterprise ECM architectures.
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </div>
