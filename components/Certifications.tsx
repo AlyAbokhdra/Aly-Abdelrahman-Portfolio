@@ -14,10 +14,21 @@ export function Certifications() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-12"
+          className="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-2 text-neutral-900 dark:text-neutral-50">Certifications</h2>
-          <div className="w-16 h-1 bg-neutral-900 dark:bg-neutral-100 rounded"></div>
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight mb-2 text-neutral-900 dark:text-neutral-50">Certifications</h2>
+            <div className="w-16 h-1 bg-neutral-900 dark:bg-neutral-100 rounded"></div>
+          </div>
+          <a 
+            href="https://www.credly.com/users/aly-abdelrahman.c4967054/badges/credly" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-flex items-center text-sm font-medium text-neutral-900 dark:text-neutral-100 hover:underline"
+          >
+            View all 20+ verified badges on Credly
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-external-link ml-1 h-4 w-4" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          </a>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -36,6 +47,7 @@ export function Certifications() {
                   src={cert.image}
                   alt={cert.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
                 />
               </div>
