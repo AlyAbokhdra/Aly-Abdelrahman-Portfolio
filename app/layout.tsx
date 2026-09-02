@@ -7,20 +7,24 @@ import { BinarySpotlight } from '@/components/binary-spotlight';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://aly-abdelrahman-portfolio.vercel.app'),
-  title: 'Aly Abdelrahman | ECM Consultant & Software Engineer',
-  description: 'Enterprise architecture, ECM consulting, and full-stack engineering portfolio.',
+  metadataBase: new URL('https://aly-abokhdra.vercel.app'),
+  title: 'Aly Abokhdra | ECM Consultant & Software Engineer',
+  description: 'Portfolio of Aly Abokhdra, Associate ECM Technical Consultant and Full-Stack Software Engineer specializing in IBM FileNet and Datacap.',
+  keywords: ['Aly Abokhdra', 'Aly Abdelrahman', 'ECM Consultant', 'Software Engineer', 'IBM FileNet', 'Datacap', 'Egypt'],
+  verification: {
+    google: 'ghB0HGpZKNJjXI0HFEIjlqnHIwpyefyjqdceALiGiOc',
+  },
   openGraph: {
-    title: 'Aly Abdelrahman | ECM Consultant & Software Engineer',
+    title: 'Aly Abokhdra | ECM Consultant & Software Engineer',
     description: 'Enterprise architecture, ECM consulting, and full-stack engineering portfolio.',
-    url: 'https://aly-abdelrahman-portfolio.vercel.app',
-    siteName: 'Aly Abdelrahman Portfolio',
+    url: 'https://aly-abokhdra.vercel.app',
+    siteName: 'Aly Abokhdra Portfolio',
     images: [
       {
-        url: '/opengraph.jpg',
+        url: '/opengraph-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Aly Abdelrahman - Portfolio Preview',
+        alt: 'Aly Abokhdra - Portfolio Preview',
       },
     ],
     locale: 'en_US',
