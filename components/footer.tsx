@@ -22,7 +22,7 @@ export function Footer() {
               <Github className="h-5 w-5" />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/alydev/"
+              href="https://www.linkedin.com/in/alyabokhdra/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-neutral-900 dark:hover:text-neutral-50 transition-colors"
