@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://aly-abokhdra.vercel.app'),
   title: 'Aly Abokhdra | ECM Consultant & Software Engineer',
   description: 'Portfolio of Aly Abokhdra, Associate ECM Technical Consultant and Full-Stack Software Engineer specializing in IBM FileNet and Datacap.',
-  keywords: ['Aly Abokhdra', 'Aly Abdelrahman', 'ECM Consultant', 'Software Engineer', 'IBM FileNet', 'Datacap', 'Egypt'],
+  keywords: ['Aly Abokhdra', 'Aly Abdelrahman', 'علي أبو خضرة', 'علي عبد الرحمن', 'ECM Consultant', 'Software Engineer', 'IBM FileNet', 'Datacap', 'Egypt'],
   verification: {
     google: 'ghB0HGpZKNJjXI0HFEIjlqnHIwpyefyjqdceALiGiOc',
   },
@@ -37,8 +37,27 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aly Abokhdra",
+    "alternateName": ["علي أبو خضرة", "Aly Abdelrahman", "علي عبد الرحمن"],
+    "jobTitle": "Associate ECM Technical Consultant",
+    "url": "https://aly-abokhdra.vercel.app",
+    "sameAs": [
+      "https://www.linkedin.com/in/alyabokhdra",
+      "https://github.com/AlyAbokhdra"
+    ]
+  };
+
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth" data-scroll-behavior="smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="bg-[#fafafa] text-neutral-900 dark:bg-neutral-950 dark:text-neutral-300 antialiased selection:bg-neutral-200 selection:text-neutral-900 dark:selection:bg-neutral-800 dark:selection:text-neutral-100">
         <ThemeProvider
           attribute="class"
